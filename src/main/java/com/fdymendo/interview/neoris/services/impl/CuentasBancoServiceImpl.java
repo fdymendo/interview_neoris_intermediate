@@ -27,11 +27,11 @@ public class CuentasBancoServiceImpl implements ICuentasBancoService {
   }
 
   @Override
-  public ResponseDefault crearOActualizar(CuentaDTO cuenta, boolean actualizar)
+  public ResponseDefault crearOactualizar(CuentaDTO cuenta, boolean actualizar)
       throws ApplicationException {
 
     if (actualizar) {
-      cuenta.validateActualizar();;
+      cuenta.validateActualizar();
     } else {
       cuenta.validateCreate();
     }
@@ -51,7 +51,7 @@ public class CuentasBancoServiceImpl implements ICuentasBancoService {
   }
 
   @Override
-  public ResponseDefault Eliminar(CuentaDTO cuenta) throws ApplicationException {
+  public ResponseDefault eliminar(CuentaDTO cuenta) throws ApplicationException {
     if (cuenta.getId() == null) {
       GenericMethods.generateError();
     }

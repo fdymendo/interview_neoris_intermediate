@@ -1,5 +1,6 @@
 package com.fdymendo.interview.neoris.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -21,19 +22,20 @@ public class ClientesController {
     this.iUsuarioService = iUsuarioService;
   }
 
-  @PostMapping
+  @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
+      produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseDefault crear(@RequestBody ClienteDTO cliente) throws ApplicationException {
-    return this.iUsuarioService.crearOActualizar(cliente, false);
+    return this.iUsuarioService.crearOactualizar(cliente, false);
   }
 
   @PutMapping
   public ResponseDefault actualizar(@RequestBody ClienteDTO cliente) throws ApplicationException {
-    return this.iUsuarioService.crearOActualizar(cliente, true);
+    return this.iUsuarioService.crearOactualizar(cliente, true);
   }
 
   @DeleteMapping
   public ResponseDefault eliminar(@RequestBody ClienteDTO cliente) throws ApplicationException {
-    return this.iUsuarioService.Eliminar(cliente);
+    return this.iUsuarioService.eliminar(cliente);
   }
-  
+
 }

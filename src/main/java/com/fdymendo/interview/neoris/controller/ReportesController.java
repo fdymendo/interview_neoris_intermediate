@@ -23,7 +23,7 @@ public class ReportesController {
   @GetMapping
   public ResponseDefault movimientosPorFecha(@RequestParam String fechainicial,
       @RequestParam String fechafinal) throws ApplicationException, ParseException {
-    return this.iTransaccionesService.TodosLosMovimientos(fechainicial, fechafinal);
+    return this.iTransaccionesService.todosLosMovimientos(fechainicial, fechafinal);
   }
 
 }

@@ -1,7 +1,6 @@
 package com.fdymendo.interview.neoris.utils;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.http.HttpStatus;
@@ -11,6 +10,8 @@ import com.fdymendo.interview.neoris.model.ResponseDefault;
 import com.fdymendo.interview.neoris.model.ResponseError;
 
 public class GenericMethods {
+
+  private GenericMethods() {}
 
   public static ResponseEntity<ResponseDefault> responseOk(ResponseDefault responseDefault) {
     return ResponseEntity.ok(responseDefault);
@@ -39,8 +40,8 @@ public class GenericMethods {
         HttpStatus.BAD_REQUEST);
   }
 
-  public static String generarFormatoFecha(Date fecha) throws ParseException {
-    DateFormat dateFormatOut = new SimpleDateFormat("dd/mm/YYYY");
+  public static String generarFormatoFecha(Date fecha) {
+    DateFormat dateFormatOut = new SimpleDateFormat("dd/MM/yyyy");
     return dateFormatOut.format(fecha);
   }
 

@@ -6,8 +6,8 @@ import com.fdymendo.interview.neoris.model.dto.CuentaDTO;
 
 public interface ICuentasBancoService {
 
-  ResponseDefault crearOActualizar(CuentaDTO cuenta, boolean actualizar) throws ApplicationException;
+  ResponseDefault crearOactualizar(CuentaDTO cuenta, boolean actualizar) throws ApplicationException;
 
-  ResponseDefault Eliminar(CuentaDTO cuenta) throws ApplicationException;
+  ResponseDefault eliminar(CuentaDTO cuenta) throws ApplicationException;
 
 }

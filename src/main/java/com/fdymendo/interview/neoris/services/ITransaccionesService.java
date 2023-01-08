@@ -7,10 +7,10 @@ import com.fdymendo.interview.neoris.model.dto.MovimientosDTO;
 
 public interface ITransaccionesService {
 
-  ResponseDefault crearOActualizar(MovimientosDTO movimientos) throws ApplicationException;;
+  ResponseDefault crearOactualizar(MovimientosDTO movimientos) throws ApplicationException;
 
-  ResponseDefault Eliminar(MovimientosDTO movimientos) throws ApplicationException;
+  ResponseDefault eliminar(MovimientosDTO movimientos) throws ApplicationException;
 
-  ResponseDefault TodosLosMovimientos(String fechaInicial, String fechaFinal)
+  ResponseDefault todosLosMovimientos(String fechaInicial, String fechaFinal)
       throws ApplicationException, ParseException;
 }

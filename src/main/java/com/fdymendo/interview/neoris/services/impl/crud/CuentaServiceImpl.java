@@ -51,7 +51,7 @@ public class CuentaServiceImpl extends ACrudServiceTemplate<ICuentaRepository, C
 
     List<CuentaEntity> listCuentas = this.repository.findByNumeroCuenta(item.getNumeroCuenta());
 
-    if (listCuentas != null && listCuentas.size() > 0) {
+    if (listCuentas != null && !listCuentas.isEmpty()) {
       for (CuentaEntity tmp : listCuentas) {
         if (tmp.getId() != item.getId() && tmp.getNumeroCuenta() != item.getNumeroCuenta()) {
           throw new ApplicationException(null, ApplicationConstant.ERROR_MAX_NUMBER_ACCOUNT,

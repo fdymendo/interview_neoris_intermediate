@@ -2,15 +2,13 @@ package com.fdymendo.interview.neoris.handlers;
 
 import org.springframework.http.HttpStatus;
 import lombok.Getter;
-import lombok.Setter;
 
 public class ApplicationException extends Exception {
 
   private static final long serialVersionUID = 1L;
 
   @Getter
-  @Setter
-  private HttpStatus httpStatus;
+  private final HttpStatus httpStatus;
 
   /**
    * The ApplicationException has a custom parameters that need to be achieved in order to be thrown

@@ -44,7 +44,7 @@ public class TransaccionesServiceImpl implements ITransaccionesService {
   }
 
   @Override
-  public ResponseDefault crearOActualizar(MovimientosDTO movimientos) throws ApplicationException {
+  public ResponseDefault crearOactualizar(MovimientosDTO movimientos) throws ApplicationException {
 
     movimientos.validate();
 
@@ -76,7 +76,7 @@ public class TransaccionesServiceImpl implements ITransaccionesService {
   }
 
   @Override
-  public ResponseDefault Eliminar(MovimientosDTO movimientos) throws ApplicationException {
+  public ResponseDefault eliminar(MovimientosDTO movimientos) throws ApplicationException {
     if (movimientos.getId() == null) {
       GenericMethods.generateError();
     }
@@ -103,7 +103,7 @@ public class TransaccionesServiceImpl implements ITransaccionesService {
   }
 
   @Override
-  public ResponseDefault TodosLosMovimientos(String fechaInicial, String fechaFinal)
+  public ResponseDefault todosLosMovimientos(String fechaInicial, String fechaFinal)
       throws ApplicationException, ParseException {
     List<MovimientosEntity> listMovimientos =
         this.iMovimientosService.findByFechaCreacionBetween(fechaInicial, fechaFinal);

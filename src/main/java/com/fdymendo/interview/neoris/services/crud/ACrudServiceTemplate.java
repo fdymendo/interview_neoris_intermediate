@@ -16,7 +16,7 @@ public abstract class ACrudServiceTemplate<T extends JpaRepository<S, Integer>, 
 
   protected T repository;
 
-  public ACrudServiceTemplate(T repository) {
+  protected ACrudServiceTemplate(T repository) {
     this.repository = repository;
   }
 

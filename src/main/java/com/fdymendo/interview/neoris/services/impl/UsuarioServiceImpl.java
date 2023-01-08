@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
   }
 
   @Override
-  public ResponseDefault crearOActualizar(ClienteDTO cliente, boolean actualizar)
+  public ResponseDefault crearOactualizar(ClienteDTO cliente, boolean actualizar)
       throws ApplicationException {
 
     Date initransaction = new Date();
@@ -63,7 +63,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
   }
 
   @Override
-  public ResponseDefault Eliminar(ClienteDTO cliente) throws ApplicationException {
+  public ResponseDefault eliminar(ClienteDTO cliente) throws ApplicationException {
     if (cliente.getId() == null) {
       GenericMethods.generateError();
     }

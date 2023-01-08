@@ -13,7 +13,7 @@ public class ListMovimientos {
   private String fecha;
   private String cliente;
   private String numeroCuenta;
-  private String Tipo;
+  private String tipo;
   private Double saldoInicial;
   private Boolean state;
   private Double movimiento;

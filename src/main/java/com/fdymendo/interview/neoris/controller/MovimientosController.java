@@ -23,13 +23,13 @@ public class MovimientosController {
   @PostMapping
   public ResponseDefault crear(@RequestBody MovimientosDTO movimientos)
       throws ApplicationException {
-    return this.iTransaccionesService.crearOActualizar(movimientos);
+    return this.iTransaccionesService.crearOactualizar(movimientos);
   }
 
   @DeleteMapping
   public ResponseDefault eliminar(@RequestBody MovimientosDTO movimientos)
       throws ApplicationException {
-    return this.iTransaccionesService.Eliminar(movimientos);
+    return this.iTransaccionesService.eliminar(movimientos);
   }
 
 }

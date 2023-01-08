@@ -23,17 +23,20 @@ public class ClienteDTO {
   public void validateCreate() throws ApplicationException {
     if (this.personaInfo == null || this.contrasenia == null || this.estado == null) {
       GenericMethods.generateError();
+    } else {
+      this.personaInfo.validarCrear();
     }
-
-    this.personaInfo.validarCrear();
 
   }
 
   public void validateUpdate() throws ApplicationException {
     if (this.id == null) {
       GenericMethods.generateError();
+    } else {
+      this.validateCreate();
+
     }
-    this.validateCreate();
+
   }
 
   public void clean() {

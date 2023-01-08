@@ -23,17 +23,17 @@ public class CuentasController {
 
   @PostMapping
   public ResponseDefault crear(@RequestBody CuentaDTO cuenta) throws ApplicationException {
-    return this.iCuentasBancoService.crearOActualizar(cuenta, false);
+    return this.iCuentasBancoService.crearOactualizar(cuenta, false);
   }
 
   @PutMapping
   public ResponseDefault actualizar(@RequestBody CuentaDTO cuenta) throws ApplicationException {
-    return this.iCuentasBancoService.crearOActualizar(cuenta, true);
+    return this.iCuentasBancoService.crearOactualizar(cuenta, true);
   }
 
   @DeleteMapping
   public ResponseDefault eliminar(@RequestBody CuentaDTO cuenta) throws ApplicationException {
-    return this.iCuentasBancoService.Eliminar(cuenta);
+    return this.iCuentasBancoService.eliminar(cuenta);
   }
   
 }
