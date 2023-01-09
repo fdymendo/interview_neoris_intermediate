@@ -114,7 +114,7 @@ public class TransaccionesServiceImpl implements ITransaccionesService {
   }
 
   private List<ListMovimientos> crearMovimientos(List<MovimientosEntity> listMovimientos)
-      throws ApplicationException, ParseException {
+      throws ApplicationException {
     List<ListMovimientos> items = new ArrayList<>();
 
     for (MovimientosEntity movimiento : listMovimientos) {
